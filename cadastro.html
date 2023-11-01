@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastro</title>
+</head>
+<body>
+<form action="cadastro.php" method="POST">
+	<center>
+  <p>
+  <label for="nome">Nome:</label>
+  <input type="text" id="nome" name="nome" placeholder="Insira seu nome aqui" required>
+  </p>
+	 <p>
+  <label for="email">E-mail:</label>
+  <input type="text" id="email" name="email" placeholder="Insira seu Email aqui" required>
+  </p>
+  <p>
+    <label for="senha">Senha:</label>
+    <input type="password" id="senha" name="senha" placeholder="Insira sua senha aqui" required>
+      </p>
+  <p>
+    <label for="confirmar"> Confirmar senha:</label>
+    <input type="password" id="senha" name="senha" placeholder="Confirme sua senha aqui" required>
+  </p>
+  <div class="text-box">
+  <input type="submit" class="btn btn-white btn-animate" href="#" name="Cadastrar" placeholder="Cadastrar">
+</div>
+</center>
+
+</form>
+</body>
+
+<style type="text/css">
+        /* Estilo para a etiqueta (label) */
+        label {
+            font-weight: bold; /* Define a fonte em negrito */
+            color: #333;       /* Define a cor do texto */
+            margin-bottom: 5px; /* Define a margem inferior para separação */
+        } 
+        /* Estilo para a caixa de texto (input) */
+        input[type="text"] {
+            padding: 5px;       /* Define preenchimento interno */
+            border: 1px solid #999; /* Define uma borda sólida com uma cor específica */
+            border-radius: 5px;    /* Define cantos arredondados */
+            width: 200px;          /* Define a largura da caixa de texto */
+            margin-top: 25px;
+        }
+        body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-screen {
+    text-align: center;
+}
+
+label {
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+} 
+        input[type="password"] {
+            padding: 5px;       /* Define preenchimento interno */
+            border: 1px solid #999; /* Define uma borda sólida com uma cor específica */
+            border-radius: 5px;    /* Define cantos arredondados */
+            width: 200px;          /* Define a largura da caixa de texto */
+            margin-top: 25px;
+        }
+        body {
+    font-family: sans-serif;
+    background-color: white;
+    font-weight: bold;
+}
+
+.text-box {
+    margin-left: 5vw;
+   margin-top: 5vh;
+
+}
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 30px 25px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .10s;
+    position: absolute;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+    background-color: blue;
+    color: white;
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.btn-animated {
+    animation: moveInBottom 5s ease-out;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+    </style>
+</html>
